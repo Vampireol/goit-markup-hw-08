@@ -1,0 +1,89 @@
+.features {
+  &__title {
+    display: none;
+  }
+
+  &__list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      padding-left: 0;
+      gap: 30px 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      align-items: start;
+
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+      height: 100%;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      width: 354px;
+      margin: 0;
+
+      text-align: left;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 120px;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+
+    border: 0;
+    border-radius: 4px;
+
+    background-color: $secondaryBackgroundColor;
+
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
+  }
+}
+
+.benefits {
+  &__title {
+    margin-bottom: 10px;
+
+    font-weight: $boldWeight;
+    font-size: 14px;
+    line-height: 1.7;
+    text-transform: uppercase;
+
+    color: $titleTextColor;
+  }
+
+  &__text {
+    text-align: left;
+  }
+}

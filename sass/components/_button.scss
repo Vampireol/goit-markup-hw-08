@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 0;
+
+  cursor: pointer;
+
+  font-family: $basicFont;
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+
+  color: $backgroundColor;
+
+  &--blue {
+    font-weight: $boldWeight;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: $largeLetterSpacing;
+
+    background-color: $accentColor;
+
+    transition: background-color 250ms $timingFunction, box-shadow 250ms $timingFunction;
+
+    &:hover {
+      background-color: $buttonHoverColor;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+      background-color: $buttonHoverColor;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

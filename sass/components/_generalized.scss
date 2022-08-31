@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+
+  font-family: $basicFont;
+  font-weight: $regularWeight;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: $mediumLetterSpacing;
+
+  color: $primaryTextColor;
+  background-color: $backgroundColor;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 480px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

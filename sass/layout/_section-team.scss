@@ -1,0 +1,149 @@
+.team {
+  background-color: $secondaryBackgroundColor;
+
+  &__title {
+    margin-bottom: 30px;
+
+    color: $titleTextColor;
+
+    font-weight: $boldWeight;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: $mediumLetterSpacing;
+
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 50px;
+
+      font-size: 36px;
+    }
+  }
+
+  &__list {
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 450px;
+
+    border-radius: 0px 0px 4px 4px;
+    background-color: $backgroundColor;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      width: 354px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and(min-width: $desktop) {
+      width: 270px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+  }
+}
+
+.employee {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__title {
+    margin-bottom: 10px;
+
+    color: $titleTextColor;
+
+    font-weight: $mediumWeight;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: none;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+
+    font-weight: $regularWeight;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 32px;
+  padding-right: 32px;
+
+  & .social__item + .social__item {
+    margin-left: 10px;
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    color: $iconColor;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingFunction;
+
+    &:hover {
+      color: $backgroundColor;
+      background-color: $accentColor;
+    }
+  }
+
+  &__link {
+    &:focus .social {
+      color: $backgroundColor;
+      background-color: $accentColor;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    fill: currentColor;
+  }
+}
